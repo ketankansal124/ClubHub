@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--sign up page-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>login page</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" id="hi" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" id="userid" required>
+                <span></span>
+                <label>User ID</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="passs"  required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input  type="button" onclick="sign()" value="Sign Up">
+            <div class="signup_link">
+                Already a member? <a href="./loginpage.html">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+<script>
+        
+function sign(){
+        let uname= document.getElementById("hi").value
+        let uid= document.getElementById("userid").value
+        let upass= document.getElementById("passs").value
+
+        let e = uid.slice(-13,)
+
+        if(uname=='' || uid=='' || upass=='')
+        {
+            alert("Input field is empty !")
+        }
+        else{
+            if('@nitkkr.ac.in' == e)
+            {
+
+
+                if( uid in localStorage)
+                {
+                    alert("User ID already exists !")
+               
+            }
+            else
+            {  if(upass.length <8)
+                {
+                    alert("Password must contain atleast 8 characters !")
+                }
+                else
+                {
+                    localStorage.setItem(uid,upass)
+                    let d = uid+'/'
+                    localStorage.setItem(d,uname)
+
+                    alert("Successfully Signed Up!")
+                    location.assign('./loginpage.html')
+                }
+               
+            }
+            }
+            else
+            {
+                alert("Sign up with nit kkr mail only !")
+            }
+        }
+    }
+
+</script>
+</html>

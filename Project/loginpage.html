@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Login Page -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>login page</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" id="userid" required>
+                <span></span>
+                <label>User ID</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="passs" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="button" onclick="login()" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="./signup.html">Signup</a>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+   
+   function login()
+   {
+        let uid= document.getElementById("userid").value
+        let upass= document.getElementById("passs").value
+         
+        let e=uid.slice(-13,)
+
+        if(uid=='' || upass=='')
+        {
+            alert('Input fields empty!')
+        }
+        else
+        {
+            if(e == '@nitkkr.ac.in')
+            {
+                if(localStorage.getItem(uid)==upass)
+                {
+                    localStorage.setItem('user',localStorage.getItem(uid+'/'))
+                
+                    location.assign('./main34.html')
+                } 
+                else
+                {
+                    alert("Invalid Username or Password !")
+                }
+            }
+            else
+            {
+                alert("Use Student Mail !")
+            }
+        }
+
+   }
+
+
+    </script>
+</body>
+
+</html>

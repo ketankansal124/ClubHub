@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gateway To Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .success-message {
+            background-color: #dff0d8;
+            border: 1px solid #d0e9c6;
+            color: #3c763d;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <p>
+            <label for="uname">Name:</label>
+            <input type="text" name="name" id="uname" required placeholder="Enter your name">
+        </p>
+        <p>
+            <label for="rollnumber">Roll No.:</label>
+            <input type="number" id="rollnumber" required placeholder="Enter your roll number">
+        </p>
+        <p>
+            <label for="bname">Branch name:</label>
+            <input type="text" name="branchname" id="bname" required placeholder="Enter your branch">
+        </p>
+        <p>
+            <label for="whatsapp">WhatsApp number:</label>
+            <input type="number" id="whatsapp" required placeholder="Enter your WhatsApp number">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Enter your valid email">
+        </p>
+        <p>
+            <label for="club">Club:</label>
+            <select id="club" name="club" required>
+                <option value="" disabled selected>Select a club</option>
+                <option value="TechnoByte">TechnoByte</option>
+                <option value="EMR">EMR</option>
+                <option value="IandECell">IandECell</option>
+                <option value="Photog">Photog</option>
+                <option value="MicroBus">MicroBus</option>
+                <option value="SAE">SAE</option>
+                <option value="Antariksh">Antariksh</option>
+                <option value="Shiksha">Shiksha</option>
+                <option value="SUC">SUC</option>
+                <option value="LSD">LSD</option>
+                <option value="MAD">MAD</option>
+                <option value="ELAD">ELAD</option>
+            </select>
+        </p>
+        <p>
+            <label for="reason">Reason to join the club:</label>
+        </p>
+        <textarea id="reason" rows="4" cols="50" placeholder="Enter your reason here"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>// Function to simulate form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form fields values
+            var name = document.getElementById('uname').value;
+            var rollNumber = document.getElementById('rollnumber').value;
+            var branch = document.getElementById('bname').value;
+            var whatsapp = document.getElementById('whatsapp').value;
+            var email = document.getElementById('email').value;
+            var reason = document.getElementById('reason').value;
+
+            // Display success message
+            var successMessage = document.createElement('p');
+            successMessage.textContent = 'Form submitted successfully!';
+            successMessage.classList.add('success-message');
+            document.body.appendChild(successMessage);
+
+            // Reset form fields
+            document.getElementById('uname').value = '';
+            document.getElementById('rollnumber').value = '';
+            document.getElementById('bname').value = '';
+            document.getElementById('whatsapp').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('reason').value = '';
+        }
+
+        // Add event listener to the form
+        var myForm = document.getElementById('myForm');
+        myForm.addEventListener('submit', submitForm);
+    </script>
+</body>
+
+</html>

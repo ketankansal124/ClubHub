@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroBus</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url("Microbus.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Main content section */
+        .main-content {
+            max-width: 2000px;
+            padding: 40px;
+            line-height: 40px;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            text-align: center;
+            position: fixed;
+            z-index: 9999;
+            /* Added to make the navigation bar fixed */
+            top: 0;
+            /* Added to position the navigation bar at the top */
+            width: 100%;
+            /* Added to make the navigation bar cover the full width */
+        }
+
+        ul.navbar li {
+            display: inline-block;
+            margin: 14px;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #111;
+        }
+
+        /* Social icons */
+        .social-icons {
+            position: static;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        section#home {
+            background-color: #f0f0f0;
+        }
+
+        section#about {
+            background-color: #fff;
+        }
+
+        section#services {
+            background-color: #f0f0f0;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        #about {
+            background-color: black;
+            opacity: 0.6;
+            width: 100%;
+        }
+
+        /* Image collage */
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image img:hover {
+            transform: translateY(-5px);
+        }
+
+
+        #services {
+            background-color: #f0f0f0;
+            background-image: linear-gradient(to bottom, orange, black);
+        }
+
+        .logo {
+            background-color: transparent;
+            height: 240px;
+            width: 240px;
+            margin-top: 150px;
+            transition: translateY(-5px);
+        }
+
+        .logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .neon-effect {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+        }
+
+        .setting {
+            text-align: left;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        #text {
+            font-weight: bold;
+            font-size: 26px;
+            color: black;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #button {
+            padding: 10px;
+            margin: 0 auto;
+            display: block;
+            background-color: white;
+            border-radius: 7px;
+            height: 50px;
+            width: 80px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #button.highlighted {
+            background-color: yellow;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Information</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <div id="home" class="main-content">
+        <section class="hero">
+            <div>
+                <img src="Microbus_Logo.jpg" class="logo">
+                <h2>Welcome To MicroBus</h2>
+                <p style="font-size: 25px; font-weight: bold; color: white;">Spearheading innovation and excellence in
+                    the field of robotics and technology.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="about" class="main-content">
+        <section>
+            <h3 style="color:white">About Us</h3>
+            <p style="color: white;">Microbus is sophisticated and professional outfit of the institute where the brains
+                of the ELECTRONICS masterminds are nurtured and the talent of the whiz kids synchronized to make every
+                programme successful. In recent times, Microbus has been a hub of activities and have brought laurels to
+                the Institution. To call them merely a society would undermine their very value. Here all the students
+                get integrated and their confidence is reinforced, so as to drive greater mileage from them. Primary
+                focus is on the technical aspects of their respective branches, which touches every nook and corner of
+                the vast info ? highway. We are not only a technical society but also an object oriented one where every
+                single viewpoint is paid heed to. We strive to achieve perfection par excellence with several successful
+                events under our belt. The events have been witnessing increased response from institutions throughout
+                the country. They have been an unbelievable opera of endowment, skills and talent.
+            </p>
+        </section>
+    </div>
+
+    <div id="services" class="main-content">
+        <section>
+            <h3>Information</h3>
+            <p style="color: white; ">
+                1. Robotics: Events like Roborynth, Autonomia, and Robowars offer participants a chance to showcase
+                their
+                robotics skills and win cash prizes.<br>
+
+                2. Modelling Events: Micrologic, Microcontroller Challenge, and E-Modelling are events that focus on
+                technical skills and require participants to demonstrate their expertise.<br>
+
+                3. Fun Events: Family Fortune and Treasure Hunt provide participants with enjoyable experiences,
+                including
+                laughter, prizes, and an opportunity to relieve stress during TechSpardha.<br>
+
+                4. Brain Teasers: Mastishq and Brainstorm are events that challenge participants' thinking abilities
+                with
+                riddles and brain-teasing questions.<br>
+
+                5. Papyrus Vitae: These events, such as Prayaas, Vision 2020, Microsearch, and IBM Challenge, require
+                participants to conduct research and deliver presentations, emphasizing innovative ideas.<br>
+
+                6. Managerial: Big Fight and Mr. Aristotle are events designed to provide insights into the corporate
+                world
+                and develop managerial skills.<br>
+            </p>
+            <div class="image">
+                <img src="Micro_1.jpg" alt="sfds" height="300">
+                <img src="Micro_2.jpg" alt="fsd" height="300">
+                <img src="Micro_3.jpg" alt="fsd" height="300">
+                <img src="Micro_4.jpg" alt="fsd" height="300">
+
+            </div>
+        </section>
+    </div>
+    <div class="form">
+        <p id="text">
+            If you are passionate about the club mentioned above, seize the opportunity by filling out the form below.
+        </p>
+        <button id="button" class="highlighted" onclick="myform()">
+            Form
+        </button>
+    </div>
+    <div id="contact" class="main-content neon-effect">
+        <section style="color: black;; font-weight: bold; font-size: 30px;">
+            <h3><b><u>Contact Us</u></b></h3>
+            <p>For any inquiries or collaborations, please feel free to reach out to us. </p>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> Email: microbussociety@gmail.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +91 080536 42047</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: E- block, NIT Kurukshetra,Kurukshetra,
+                    Haryana-136119, IN</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/microbus_nitkkr/?hl=en" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://in.linkedin.com/company/microbusnitkkr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/microbusnitkkr/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="mailto:microbussociety@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
+    <script>
+        const myform = () => {
+            location.href = "form.html";
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+</body>
+
+</html>

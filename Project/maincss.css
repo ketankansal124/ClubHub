@@ -1,0 +1,493 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#this {
+    background-color: rgb(150, 35, 35);
+    animation: blogg 4s linear 2.5s infinite reverse;
+
+}
+
+header {
+    color: white;
+    padding: 20px;
+    background-color: rgb(42, 38, 38);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    box-shadow: 1px -1px 12px;
+}
+
+#bigbutt {
+    background-color: rgb(81, 52, 8);
+    color: white;
+    border: none;
+    float: right;
+    padding: 15px;
+    margin-top: -12px;
+}
+
+#bigbutt:hover {
+    cursor: pointer;
+    background-color: rgb(173, 141, 25);
+}
+
+#chalo {
+    padding-right: 35px;
+    border-right: 1px solid wheat;
+}
+
+.heading {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: 120px;
+    color: wheat;
+    width: 1250px;
+}
+
+.para {
+    margin-left: 370px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#one {
+    height: 200px;
+    width: 150px;
+    margin-left: 10px;
+    background-color: rgb(150, 35, 35);
+    transform: rotate(0turn);
+    animation: rotation1 4s linear 2.5s infinite reverse;
+    border: solid 2px white;
+}
+
+#two {
+    height: 200px;
+    width: 150px;
+    float: right;
+    transform: rotate(0deg);
+    background-color: rgb(150, 35, 35);
+    animation: rotation2 4s linear 2.5s infinite reverse;
+    border: solid 2px white;
+    margin-left: 10px;
+}
+
+.cooking {
+    width: 950px;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+
+.cooking img {
+    width: 950px;
+    height: 600px;
+    border: solid 2px white;
+}
+
+
+@keyframes blogg {
+    from {
+        background-color: rgb(207, 69, 69);
+    }
+
+    to {
+        background-color: rgb(72, 39, 12);
+    }
+}
+
+@keyframes rotation1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(12deg);
+    }
+
+    from {
+        background-color: rgb(207, 69, 69);
+    }
+
+    to {
+        background-color: rgb(72, 39, 12);
+    }
+}
+
+@keyframes rotation2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-10deg);
+    }
+
+    from {
+        background-color: rgb(207, 69, 69);
+    }
+
+    to {
+        background-color: rgb(72, 39, 12);
+    }
+}
+
+.s2 {
+    height: 500px;
+    background-color: rgb(177, 112, 7);
+    margin-top: -80px;
+    color: white;
+    padding: 100px;
+}
+
+.s2 p {
+    font-size: 45px;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.s2 pre {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#pencil {
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    left: 50%;
+    margin-top: -280px;
+}
+
+#world {
+    height: 236px;
+    width: 450px;
+    position: absolute;
+    left: 70%;
+    margin-top: -150px;
+}
+
+#p {
+    padding-top: 10px;
+    height: 230px;
+    width: 350px;
+}
+
+.s3 {
+    height: 500px;
+    background-color: rgb(23, 133, 133);
+    margin-top: -65px;
+    color: white;
+}
+
+#lem {
+    height: 300px;
+    width: 500px;
+    padding-top: 110px;
+}
+
+.s3 p {
+    font-size: 45px;
+    margin-left: 55px;
+    position: absolute;
+    left: 35%;
+    margin-top: -300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.s3 pre {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 36%;
+    margin-top: -200px;
+
+}
+
+.s4 {
+    height: 700px;
+    background-color: rgb(73, 93, 110);
+    margin-top: -65px;
+    color: white;
+}
+
+.s4 p {
+    font-size: 50px;
+    margin-left: 60px;
+    padding-top: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.s4 pre {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#worldmap,
+#graph {
+    height: 280px;
+    width: 435px;
+    display: block;
+    position: relative;
+    left: 70%;
+}
+
+#worldmap {
+    margin-top: -500px;
+}
+
+footer {
+    background-color: rgb(1, 1, 29);
+    height: 340px;
+    color: white;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.tagline {
+    margin-right: 20px;
+    font-size: 16px;
+    color: white;
+    padding-top: 70px;
+
+}
+
+#nit {
+    width: 100px;
+    margin-left: 250px;
+}
+
+ul.navbar {
+    left: 0;
+    right: 0;
+    background-color: #333;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+
+ul.navbar li {
+    display: inline-block;
+    margin: 14px;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+ul.navbar li a:hover {
+    background-color: #111;
+}
+
+.social-icons {
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.club {
+
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.club:hover {
+    background-color: skyblue;
+}
+
+#technical {
+    height: 65px;
+    width: 170px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 250px;
+    margin-top: -100px;
+
+}
+
+#Health {
+    height: 65px;
+    width: 170px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 800px;
+    margin-top: -50px;
+
+}
+
+#Cultural {
+    height: 65px;
+    width: 170px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 250px;
+    margin-top: -150px;
+    padding-top: -100px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    margin-left: 280px;
+    background-color: #f9f9f9;
+    color: black;
+    max-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    margin-left: 835px;
+    background-color: #f9f9f9;
+    max-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    margin-left: 276px;
+    background-color: #f9f9f9;
+    width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.dropdown-content3 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* Additional styling for the button */
+.club {
+    padding: 10px 20px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.btn {
+    float: right;
+    margin-top: 20px;
+    background-color: skyblue;
+    padding: 4px;
+}
+
+#profile {
+    float: right;
+    height: 60px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#p{
+    font-size: 20px;
+    width: 100px;
+    height: 10px;
+    float:right;
+    color:white;
+    margin-right: 20px;
+}
+#b1 {
+    margin-right: 40px;
+    border-radius: 4px;
+    height: 40px;
+    width: 70px;
+}
+
+#b2 {
+    margin-right: 8px;
+    border-radius: 4px;
+    height: 40px;
+    width: 70px;
+}
+
+#credits{
+    height: 50px;
+    width: 100px;
+    background-color: skyblue;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    translate: 650px -250px;
+    font-weight: bold;
+    font-size: 18px;
+}

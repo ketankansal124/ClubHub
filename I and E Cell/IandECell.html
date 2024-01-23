@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I&E Cell</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url("9.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Main content section */
+        .main-content {
+            max-width: 2000px;
+            padding: 40px;
+            line-height: 40px;
+        }
+
+        /* Hero section */
+        .hero {
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            text-align: center;
+            position: fixed;
+            /* Added to make the navigation bar fixed */
+            top: 0;
+            /* Added to position the navigation bar at the top */
+            width: 100%;
+            /* Added to make the navigation bar cover the full width */
+        }
+
+        ul.navbar li {
+            display: inline-block;
+            margin: 14px;
+        }
+
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #111;
+        }
+
+        /* Social icons */
+        .social-icons {
+            position: static;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        section#home {
+            background-color: #f0f0f0;
+        }
+
+        section#about {
+            background-color: #fff;
+        }
+
+        section#services {
+            background-color: #f0f0f0;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        /* Achievements styles */
+        .achievements {
+            margin-bottom: 30px;
+            text-align: left;
+            color: white;
+        }
+
+        .achievements h3 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .achievements ul {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        .achievements ul li {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        #about {
+            background-color: black;
+            width: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+        }
+
+        .achieve {
+            text-align: left;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+        }
+
+        /* Image collage */
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact {
+            background-color: black;
+            color: white;
+            opacity: 80%;
+            position: relative;
+        }
+
+        #contact h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        #contact p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        #contact ul {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        .image img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #services {
+            background-color: #f0f0f0;
+            background-image: linear-gradient(to bottom, #f0f0f0, #d8d8d8);
+        }
+
+        #photos {
+            margin-left: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #photos img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #photos {
+            margin-left: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 100;
+        }
+
+        #photos img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #photos img:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        #contact {
+            background-color: black;
+            color: white;
+            opacity: 80%;
+            position: relative;
+        }
+
+        #contact h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        #contact p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        #contact ul {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation-name: textAnimation;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            font-size: 24px;
+            transition: color 0.5s ease;
+        }
+
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ul {
+            animation-name: listAnimation;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes listAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .setting {
+            text-align: left;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        #text {
+            font-weight: bold;
+            font-size: 26px;
+            color: black;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #button {
+            padding: 10px;
+            margin: 0 auto;
+            display: block;
+            background-color: white;
+            border-radius: 7px;
+            height: 50px;
+            width: 80px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #button.highlighted {
+            background-color: yellow;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <div id="home" class="main-content">
+        <section class="hero">
+            <div>
+                <h2 style="color:white;">Welcome to Industry And Entrepreneurship Club</h2>
+                <img src="ILogo.jpg" alt="">
+                <p style="font-size: 25px; font-weight: bold; color: white;">"Unlocking Innovation, Empowering
+                    Entrepreneurs"</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="about" class="main-content">
+        <section>
+            <h3 style="color:white">About Us</h3>
+            <p style="color: white;">I&E cell of NIT Kurukshetra is a non-profit student's organization dedicated to
+                promoting the spirit of entrepreneurship among college students.</p>
+            <div id="events" class="achievements">
+                <h3>Events</h3>
+                <ul class="achieve">
+                    <li><b><u>Productathon</u></b>: Online hackathon to create innovative hardware and software
+                        solutions based on given product statements. Team event with learning and enjoyment through
+                        various activities.</li>
+                    <li><b><u>Tradehunt</u></b>: Crypto trading competition where participants use $50,000 to make the
+                        most profit. Ideal for both experienced traders and newcomers to learn trading through real-life
+                        experience.</li>
+                    <li><b><u>B-Plan</u></b>: Business model competition promoting entrepreneurship among students.
+                        Teams develop an idea into a practical business model and present it to a judging panel. Chance
+                        to win cash prizes and sponsored trips worth ₹2.5Lacs.</li>
+                    <li><b><u>BidBizz</u></b>: Team-bidding event to estimate company valuations based on given metrics.
+                        Tests finance and decision-making skills in a high-pressure auction environment. No prior
+                        financial knowledge required.</li>
+                </ul>
+            </div>
+            <div id="photos">
+                <img src="1.jpg" alt="">
+                <img src="2.jpg" alt="">
+                <img src="3.jpg" alt="">
+                <img src="4.jpg" alt="">
+            </div>
+            <div id="photos">
+                <img src="5.jpg" alt="">
+                <img src="6.jpg" alt="">
+                <img src="7.jpg" alt="">
+                <img src="8.jpg" alt="">
+            </div>
+    </div>
+    </section>
+    </div>
+    <div class="form">
+        <p id="text">
+            If you are passionate about the club mentioned above, seize the opportunity by filling out the form below.
+        </p>
+        <button id="button" class="highlighted" onclick="myform()">
+            Form
+        </button>
+    </div>
+    <div id="contact" class="main-content">
+        <section>
+            <h3 style="color: white;"><b><u>Contact Us</u></b></h3>
+            <p style="color: white;">For any inquiries or collaborations, please reach out to us.</p>
+            <ul class="contact-info" style="color: white;list-style: none;">
+                <li><i class="fas fa-envelope"></i> Email: i&enitk@gmail.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +1 123 456 7890</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: NIT kkr</li>
+            </ul>
+        </section>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/ie_cell.nitkkr/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://in.linkedin.com/company/icellnitkkr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/industrycell/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="mailto:i&ecell@nitkkr.ac.in" target="_blank" rel="noopener noreferrer">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
+    <script>
+        const myform = () => {
+            location.href = "form.html";
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+</body>
+
+</html>
